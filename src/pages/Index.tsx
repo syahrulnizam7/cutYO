@@ -24,7 +24,7 @@ const Index = () => {
       const formData = new FormData();
       formData.append("image", file);
 
-      const response = await fetch("https://cutyo.alangkun.fun/api/remove-bg", {
+      const response = await fetch("https://cutyo-api.alangkun.fun/api/remove-bg", {
         method: "POST",
         body: formData,
       });
