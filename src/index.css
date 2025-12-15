@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 30% 98%;
+    --foreground: 220 40% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+
+    --primary: 45 90% 55%;
+    --primary-foreground: 220 40% 13%;
+    --primary-glow: 45 95% 60%;
+
+    --secondary: 220 25% 94%;
+    --secondary-foreground: 220 40% 20%;
+
+    --muted: 220 20% 92%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 220 60% 25%;
+    --accent-foreground: 45 90% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 45 90% 55%;
+
+    --radius: 0.5rem;
+
+    --gradient-gold: linear-gradient(135deg, hsl(45, 90%, 55%), hsl(35, 85%, 50%));
+    --gradient-navy: linear-gradient(180deg, hsl(220, 40%, 15%), hsl(220, 50%, 8%));
+  }
+
+  .dark {
+    --background: 220 45% 6%;
+    --foreground: 220 15% 92%;
+
+    --card: 220 40% 10%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 220 40% 10%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 45 90% 58%;
+    --primary-foreground: 220 45% 6%;
+    --primary-glow: 45 95% 65%;
+
+    --secondary: 220 35% 15%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 30% 12%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 220 50% 18%;
+    --accent-foreground: 45 90% 58%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 45 90% 58%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(45, 90%, 58%), hsl(35, 85%, 52%));
+    --gradient-navy: linear-gradient(180deg, hsl(220, 45%, 8%), hsl(220, 50%, 4%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--primary));
+  }
+
+  .bg-gold {
+    background: var(--gradient-gold);
+  }
+
+  .elegant-border {
+    @apply border border-border/50;
+  }
+
+  .elegant-shadow {
+    box-shadow: 0 4px 30px hsl(220 40% 13% / 0.06);
+  }
+
+  .elegant-shadow-lg {
+    box-shadow: 0 8px 40px hsl(220 40% 13% / 0.1);
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px hsl(45 90% 55% / 0.3);
+  }
+
+  .dark .elegant-shadow {
+    box-shadow: 0 4px 30px hsl(0 0% 0% / 0.3);
+  }
+
+  .dark .elegant-shadow-lg {
+    box-shadow: 0 8px 40px hsl(0 0% 0% / 0.4);
+  }
+}
