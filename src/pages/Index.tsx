@@ -174,10 +174,12 @@ const Index = () => {
                   </p>
                 </motion.div>
 
+                <div className="w-[400px] mx-auto">
                 <ComparisonSlider
                   originalImage={originalImage}
                   processedImage={processedImage}
                 />
+                </div>
 
                 <ResultActions
                   processedImage={processedImage}

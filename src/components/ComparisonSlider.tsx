@@ -101,25 +101,34 @@ export const ComparisonSlider = ({
           src={originalImage}
           alt="Original"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ width: `${100 / (sliderPosition / 100)}%`, maxWidth: "none" }}
+          style={{
+            width: `${100 / (sliderPosition / 100)}%`,
+            maxWidth: "none",
+          }}
           draggable={false}
         />
       </div>
 
       {/* Slider line */}
       <div
-        className="absolute top-0 bottom-0 w-px bg-primary/80"
+        className="absolute top-0 bottom-0 w-px bg-[#1dabd5]/80"
         style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
+      />
+
+      {/* Handle */}
+      <motion.div
+        className="absolute w-12 h-12 rounded-full bg-card elegant-border elegant-shadow flex items-center justify-center z-10"
+        style={{
+          left: `${sliderPosition}%`,
+          top: "50%",
+          x: "-50%",
+          y: "-50%",
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
       >
-        {/* Handle */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-card elegant-border elegant-shadow flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <MoveHorizontal className="w-5 h-5 text-primary" />
-        </motion.div>
-      </div>
+        <MoveHorizontal className="w-5 h-5 text-[#1dabd5]" />
+      </motion.div>
 
       {/* Labels */}
       <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full bg-card/90 backdrop-blur-sm elegant-border text-xs font-medium text-muted-foreground">

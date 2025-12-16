@@ -12,7 +12,7 @@ export const ProcessingAnimation = () => {
       <div className="relative w-32 h-32">
         {/* Outer ring */}
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-primary/20"
+          className="absolute inset-0 rounded-full border-2 border-[#1dabd5]/20"
           animate={{ rotate: 360 }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
         />
@@ -30,7 +30,7 @@ export const ProcessingAnimation = () => {
         {/* Inner circle */}
         <div className="absolute inset-6 rounded-full bg-card elegant-shadow flex items-center justify-center">
           <motion.div
-            className="w-8 h-8 rounded-full bg-gold"
+            className="w-8 h-8 rounded-full bg-[#1dabd5]"
             animate={{ scale: [1, 0.8, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -40,7 +40,7 @@ export const ProcessingAnimation = () => {
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-primary"
+            className="absolute w-2 h-2 rounded-full bg-[#1dabd5]"
             style={{
               top: "50%",
               left: "50%",
@@ -75,7 +75,7 @@ export const ProcessingAnimation = () => {
       {/* Progress line */}
       <div className="w-48 h-0.5 rounded-full bg-border overflow-hidden">
         <motion.div
-          className="h-full bg-gold"
+          className="h-full bg-[#1dabd5]"
           initial={{ x: "-100%" }}
           animate={{ x: "100%" }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

@@ -56,7 +56,7 @@ export const ResultActions = ({ processedImage, onReset }: ResultActionsProps) =
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         onClick={handleDownload}
-        className="flex-1 w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-medium text-primary-foreground bg-gold gold-glow transition-all duration-300"
+        className="flex-1 w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-medium text-primary-foreground bg-[#1dabd5] gold-glow transition-all duration-300"
       >
         <Download className="w-4 h-4" />
         Download
