@@ -15,14 +15,14 @@ export const Header = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-3"
+          className="flex items-center"
         >
-          <div className="w-10 h-10 rounded-full bg-[#1dabd5] flex items-center justify-center">
-            <Gem className="w-5 h-5 text-white" />
+          <div className="w-14 h-14  flex items-center justify-center">
+            <img src="/logo-cutyo.png" />
           </div>
           <div className="hidden sm:block">
-            <span className="text-xl font-serif text-foreground tracking-wide">
-              Eraser<span className="text-[#2596be]">.</span>
+            <span className="text-3xl font-brandCut text-foreground tracking-wide">
+              Cut<span className="font-brandYo text-[#2596be] ml-0.5 transition-colors duration-300 hover:text-cyan-400">YO</span>
             </span>
           </div>
         </motion.div>

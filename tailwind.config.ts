@@ -16,7 +16,9 @@ export default {
       fontFamily: {
         sans: ['Outfit', 'sans-serif'],
         serif: ['Cormorant Garamond', 'serif'],
-        typography: ['"Playfair Display"', 'serif'],
+        typography: ['Playfair Display', 'serif'],
+        brandCut: ['Kirang Haerang', 'cursive'],
+        brandYo: ['Barrio', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
